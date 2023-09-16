@@ -1,6 +1,6 @@
 # Uber Business Intelligence Engineering Project via GCP
 
-## Dashboard can be found [here](https://lookerstudio.google.com/reporting/31de764d-ec5a-43f4-a6e1-229e24c0ce40)
+## [Final Dashboard](https://lookerstudio.google.com/reporting/31de764d-ec5a-43f4-a6e1-229e24c0ce40)
 ## Project Scope: 
 
 * Design and implement an end-to-end **ETL data pipeline** integrating Uber ride-sharing data into **Google Big Query data warehouse** by utilizing Python, Google Cloud Storage, Google Mage compute engine, and Mage.ai data engineering tools.
