@@ -46,7 +46,7 @@ Open pipeline tools (similar to airflow): Modern data engineering tool
 ## Step 2: Store Data in Google Cloud Storage and set up Google Cloud Service
 * Google Cloud Storage
   * Create a new Google Project → Create a Google Cloud Bucket → Load data into Google Cloud Storage
- 
+* Command List can be found [here]
 ## Step 3: Write Transformation Code and ETL Script on Mage.AI
 * Python Transformation Code (Jupiter Notebook) can be found [here]
 * Python ELT Code Via Mage.AI can be found [here]
