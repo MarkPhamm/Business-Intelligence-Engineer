@@ -44,4 +44,47 @@
 * [Dataset](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 * [Data Dictionary](https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf)
 
-<!-- Remaining content remains unchanged -->
+## Step 1: Data Modelling 
+**Fact vs. Dimension tables**
+* **Fact Table: (changing)**
+  * Contains quantitative measures or metrics that are used for analysis
+  * Typically contains foreign keys that link to dimension tables
+  * Contains columns that have high cardinality and change frequently
+  * Contains columns that are not useful for analysis by themselves, but are necessary for calculating metrics
+
+* **Dimension Table: (static)**
+  * Contains columns that describe attributes of the data being analyzed
+  * Typically contains primary keys that link to fact tables
+  * Contains columns that have low cardinality and don't change frequently
+  * Contains columns that can be used for grouping or filtering data for analysis
+
+### The Star-Schema data model:
+![image](https://github.com/MarkPhamm/Business-Intelligence-Engineer/assets/99457952/f5b3f214-b55a-4108-aef1-bb23a16b895a)
+
+## Step 2: Store Data in Google Cloud Storage and set up Google Cloud Service
+* **Google Cloud Storage**
+  * Create a new Google Project → Create a Google Cloud Bucket → Load data into Google Cloud Storage → Edit Access to Public
+   
+* **Google Cloud Compute Engine**
+  * Create a new Instance → Chose region, configuration → Run SSH
+  * Command List can be found [here](https://github.com/MarkPhamm/Uber-BI-Engineer-Project/blob/main/GCP%20Command.txt)
+  * Edit Firewall:
+    * Create new Firewall rules
+    * Sources IPV4 address 0.0.0.0/0
+    * Port: Result from the Compute Engine
+* Run External IP address: port
+## Step 3: Write Transformation Code and ETL Script on Mage.AI
+* Python Transformation Code (Jupiter Notebook) can be found [here](https://github.com/MarkPhamm/Uber-BI-Engineer-Project/blob/main/Python%20Transform.ipynb)
+* Python ELT Code Via Mage.AI can be found [here](https://github.com/MarkPhamm/Uber-BI-Engineer-Project/blob/main/Python%20ETL.ipynb)
+* Edit io_config.yaml
+  * Go to GCP API → Create new credential → Service Account → Create new keys → Download keys
+  * Enter keys to io_config.yaml
+ 
+## Step 4: Write SQL Queries on Google Big Query
+* SQL Queries can be found [here](https://github.com/MarkPhamm/Uber-BI-Engineer-Project/blob/main/SQL%20Analytics%20Table)
+
+## Step 5: Load data into Google Looker Studio and create a Dashboard 
+* The last step is to Develop an interactive dashboard using Google Looker Analytics to visualize key Uber KPIs such as driver productivity, rider retention, and revenue while enabling dynamic filtering capabilities for business users
+* [**Result Dashboard**](https://lookerstudio.google.com/reporting/31de764d-ec5a-43f4-a6e1-229e24c0ce40)
+
+
